@@ -18,7 +18,7 @@ class PropertyFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->streetName().'-'.fake()->randomElement(['Studio','Appartement','villa','Maisons','Hotel']),
+            'name' => fake()->streetName().' - '.fake()->randomElement(['Studio','Appartement','villa','Maisons','Hotel']),
             'description' => fake()->paragraph(),
             'price_per_night' => fake()->numberBetween(50,500),
             'capacity' => fake()->numberBetween(1,8),
