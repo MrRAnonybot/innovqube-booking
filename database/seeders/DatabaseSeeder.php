@@ -2,9 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\Property;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,8 +20,9 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory()->create([
-            'name' => 'Test User',
+            'name' => 'TestUser',
             'email' => 'test@example.com',
         ]);
+        Property::factory(10)->create();
     }
 }
