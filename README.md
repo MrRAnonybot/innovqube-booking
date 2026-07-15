@@ -33,3 +33,13 @@ npm run dev
 ```bash
 php artisan test
 ```
+## Captures d'écran
+
+### Catalogue
+![Catalogue](screenshots/catalogue.png)
+
+### Réservation
+![Réservation](screenshots/reservation.png)
+
+### Administration Filament
+![Admin](screenshots/admin.png)
