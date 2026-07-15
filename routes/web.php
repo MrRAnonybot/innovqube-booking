@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\PropertyCatalog;
+use App\Livewire\BookProperty;
+use App\Livewire\MyBookings;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,5 +23,13 @@ Route::middleware('auth')->group(function () {
 Route::get('/properties', PropertyCatalog::class)
     ->middleware(['auth'])
     ->name('properties.index');
+
+Route::get('/properties/{property}/book', BookProperty::class)
+    ->middleware(['auth'])
+    ->name('properties.book');
+
+Route::get('/my-bookings', MyBookings::class)
+    ->middleware('auth')
+    ->name('bookings.index');
 
 require __DIR__.'/auth.php';

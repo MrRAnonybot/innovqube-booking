@@ -54,3 +54,5 @@ it('calculates the total price correctly', function(){
 
     expect($property->priceFor('2026-07-10', '2026-07-13'))->toBe(300.0);
 });
+
+
